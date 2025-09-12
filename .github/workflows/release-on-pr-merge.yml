@@ -91,6 +91,7 @@ jobs:
                 owner, repo, pull_number: pr.number, per_page: 100
               });
               const lines = commits.map(c => `- ${c.sha.substring(0,7)} ${c.commit.message.split('\n')[0]} (${c.author?.login ?? c.commit.author?.name ?? 'unknown'})`);
+              const header = `PR: ${pr.html_url} ${pr.title} 请访问详情界面查看具体情况 \n\nCommits:\n`;
               core.setOutput('body', header + lines.join('\n'));
             }
 

@@ -1,0 +1,29 @@
+###################################################
+# Configuration file for Horde
+# By kpAjun@HyenaMC, yes it is this simple!
+# Use localization.yml for templates and messages
+# Use prefix.yml to set permission-based prefixes
+###################################################
+
+# Whether to broadcast a player's chat messages by default
+default-global-chat: true
+
+# Whether to log player chat messages on Velocity
+log-messages: false
+
+# Whether to enable legacy chat formatting codes (&)
+# This disables MiniMessage formatting in chat messages!
+# ONLY APPLIES TO RAW MESSAGES TYPED BY THE PLAYER
+enable-legacy-chat-formatting: true
+
+# Whether to enable legacy formatting codes (§) in localizations
+# This disables MiniMessage formatting and breaks default templates!
+# Only use this to maintain compatibility with old configs!
+# APPLIES TO LOCALIZATIONS AND CHAT TEMPLATES EXCLUDING RAW MESSAGES
+enable-legacy-localization-formatting: false
+
+# Forwards chat message senders' UUID using legacy Identity API
+# This may allow better support for client mods like Chat Heads
+# However, Mojang's secure profiles will break this!
+# Configure enforce-secure-profiles to false AT YOUR RISK to use
+forward-sender-uuid: false

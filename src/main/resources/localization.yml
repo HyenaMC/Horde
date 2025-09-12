@@ -1,0 +1,68 @@
+###################################################
+# Localization file for Horde
+# By kpAjun@HyenaMC, you may modify this as you wish!
+# This file is serialized with MiniMessage by default.
+# Specific supported placeholders are annotated.
+###################################################
+
+# General
+
+# {horde_version} - The current version of Horde
+# {default_broadcast} - The default broadcast mode set by the user (TRUE/FALSE)
+HORDE_COMMAND_HELP: |
+  
+  -------------------------------------------------------------------------------
+  <gold><bold>Horde</bold> v{horde_version} <italic>by kpAjun@HyenaMC</italic></gold>
+  <gray>The light-weight chat plugin with minimal configuration.</gray>
+  -------------------------------------------------------------------------------
+  Default broadcast enabled for you: <green>{default_broadcast}</green>
+  - <aqua><click:run_command:'/horde help'><u>/horde help<!u></click></aqua> <white>Displays this help message.</white>
+  - <aqua><click:run_command:'/horde reload'><u>/horde reload<!u></click></aqua> <white>Reload plugin configurations.</white>
+  You may use the <aqua><click:run_command:'/b'><u>/b<!u></click></aqua> and <aqua><click:run_command:'/l'><u>/l<!u></click></aqua> to send or toggle broadcast/local messages.
+
+# {horde_version} - The current version of Horde
+HORDE_COMMAND_HELP_CONSOLE: |
+  
+  -------------------------------------------------------------------------------
+  <gold><bold>Horde</bold> v{horde_version} <italic>by kpAjun@HyenaMC</italic></gold>
+  <gray>The light-weight chat plugin with minimal configuration.</gray>
+  -------------------------------------------------------------------------------
+  - <aqua><click:run_command:'/horde help'>/horde help</click></aqua> <white>Displays this help message.</white>
+  - <aqua><click:run_command:'/horde reload'>/horde reload</click></aqua> <white>Reload plugin configurations.</white>
+  Clients may use the <click:run_command:'/b'>/b</click> and <click:run_command:'/l'>/l</click> to send or toggle broadcast/local messages.
+
+HORDE_COMMAND_RELOAD_SUCCESS: <gold><bold>[Horde]</bold></gold> Configurations reloaded successfully.
+
+BROADCAST_COMMAND_DEFAULT_SET: <gold><bold>[Horde]</bold></gold> Your chat message will be broadcasted to all servers by default.
+LOCAL_COMMAND_DEFAULT_SET: <gold><bold>[Horde]</bold></gold> Your chat message will be visible to your server's player by default.
+
+COMMAND_NO_PERMISSION: <gold><bold>[Horde]</bold></gold> <red>Sorry, you do not have permission to execute this command.</red>
+COMMAND_MUST_BE_PLAYER: <gold><bold>[Horde]</bold></gold> <red>Sorry, only players can execute this command.</red>
+
+CHAT_NO_PERMISSION: <gold><bold>[Horde]</bold></gold> <red>Sorry, you do not have permission to send this type of chat messages.</red>
+
+# {command} - The root command being executed
+COMMAND_UNKNOWN_SUBCOMMAND: <gold><bold>[Horde]</bold></gold> <red>Unknown subcommand. Use <aqua><click:run_command:'/{command} help'><u>/{command} help<!u></click></aqua> for help.</red>
+
+# Templates
+
+# See Name Mappings below to avoid showing ugly IDs!
+# {server} - The mapped server name the message is sent from
+# {player} - The player sending the message
+# {any_permission_prefix_set} - See and edit prefix.yml
+# Examples:
+# GLOBAL_CHAT_TEMPLATE: [{server}][{world}]{any_permission_prefix_set}{player}: # message...
+# LOCAL_CHAT_TEMPLATE: [{world}]{any_permission_prefix_set}{player}: # message...
+GLOBAL_CHAT_TEMPLATE: "[{server}]{player}:" # message...
+LOCAL_CHAT_TEMPLATE: "{player}:" # message...
+
+
+# Name Mappings
+# You may customize how server/world names appear in chat here.
+# Use the exact server/world names as keys, and the desired display names as values.
+# If a server/world is not listed here, it will appear as its original name.
+# You may format it using the deserializer (MiniMessage/Legacy) you chose in config.yml.
+# But do NOT format it twice here and in the template!
+SERVER_NAME_MAPPINGS:
+  lobby: "<aqua>Lobby</aqua>"
+  survival: "<green>Survival</green>"

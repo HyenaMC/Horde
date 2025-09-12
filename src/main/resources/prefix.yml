@@ -1,0 +1,25 @@
+###################################################
+# Permission-based Prefix file for Horde
+# By kpAjun@HyenaMC, you may modify this as you wish!
+# This file is serialized with MiniMessage by default.
+###################################################
+
+# This file is structured as the following example:
+# any_permission_prefix_set:
+#     - permission: "horde.prefix.moderator"
+#       prefix: "<red>[MOD]</red>"
+#     - permission: "horde.prefix.builder"
+#       prefix: "<green>[BUILDER]</green>"
+#     - permission: "horde.prefix.member"
+#       prefix: "<gray>[MEMBER]</gray>"
+#     - permission: "horde.prefix.default"
+#       prefix: "<white>[PLAYER]</white>"
+# The {any_permission_prefix_set} in templates will be replaced by the first permission met.
+
+# NOTE: The order of prefixes matters! The first matching permission will be used.
+# In this case, if a player is both a moderator and a builder, they will get the [MOD] prefix.
+
+# Horde checks for permissions on Velocity, sync them with backends using permission plugins.
+# Format the prefix using the deserializer (MiniMessage/Legacy) you chose in config.yml.
+# However, do NOT format it twice here and in localization.yml templates!
+

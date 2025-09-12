@@ -105,5 +105,4 @@ jobs:
           prerelease: ${{ contains(steps.meta.outputs.version, 'alpha') || contains(steps.meta.outputs.version, 'beta') || contains(steps.meta.outputs.version, 'rc') }}
           files: |
             ${{ steps.meta.outputs.jar_path }}
-            target/*.jar
           overwrite: true

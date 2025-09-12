@@ -106,3 +106,4 @@ jobs:
           files: |
             ${{ steps.meta.outputs.jar_path }}
             target/*.jar
+          overwrite: true

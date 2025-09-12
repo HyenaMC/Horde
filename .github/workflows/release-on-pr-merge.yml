@@ -85,7 +85,7 @@ jobs:
             const { owner, repo } = context.repo;
             const pr = context.payload.pull_request;
             if (!pr) {
-              core.setOutput('body', 'Manual release run');
+              core.setOutput('body', '该次发布为手动触发，详情请查询我们的网站https://minecraft.teamhyena.org');
             } else {
               const commits = await github.paginate(github.rest.pulls.listCommits, {
                 owner, repo, pull_number: pr.number, per_page: 100
@@ -100,7 +100,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: ${{ steps.tag.outputs.tag }}
-          name: ${{ steps.meta.outputs.plugin_name }} v${{ steps.meta.outputs.version }}
+          name: Horde v${{ steps.meta.outputs.version }}
           body: ${{ steps.notes.outputs.body }}
           prerelease: ${{ contains(steps.meta.outputs.version, 'alpha') || contains(steps.meta.outputs.version, 'beta') || contains(steps.meta.outputs.version, 'rc') }}
           files: |

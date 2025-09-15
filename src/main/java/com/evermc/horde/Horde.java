@@ -22,7 +22,7 @@ import org.slf4j.Logger;
 
 import java.nio.file.Path;
 
-@Plugin(id = "horde", name = "Horde", version = "1.0.0",
+@Plugin(id = "horde", name = "Horde", version = "1.0.1",
         authors = {"kpAjun@HyenaMC"},
         url = "https://minecraft.teamhyena.org",
         description = "A light-weight chat plugin with minimal configurations.")
